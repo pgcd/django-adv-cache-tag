@@ -586,7 +586,7 @@ class CacheTag(object, metaclass=CacheTagMetaClass):
             self.RAW_TOKEN_START,
             self.content,
             self.RAW_TOKEN_END,
-        ]))
+        ]), name="nocache_block")  # template name is required for assertTemplateUsed
         return tmpl.render(self.context)
 
     @classmethod
